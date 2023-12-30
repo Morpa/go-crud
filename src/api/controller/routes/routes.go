@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"github.com/Morpa/go-crud/cmd/api/controller"
+	"github.com/Morpa/go-crud/src/api/controller"
 	"github.com/gin-gonic/gin"
 )
 
