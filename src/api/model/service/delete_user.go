@@ -1,7 +1,7 @@
-package model
+package service
 
 import "github.com/Morpa/go-crud/src/api/configuration/rest_err"
 
-func (*UserDomain) DeleteUser(string) *rest_err.RestErr {
+func (*userDomainService) DeleteUser(string) *rest_err.RestErr {
 	return nil
 }
