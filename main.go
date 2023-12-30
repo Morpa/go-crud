@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 
-	"github.com/Morpa/go-crud/src/api/configuration/database/mongodb"
 	"github.com/Morpa/go-crud/src/api/configuration/logger"
 	"github.com/Morpa/go-crud/src/api/controller"
 	"github.com/Morpa/go-crud/src/api/controller/routes"
@@ -18,8 +17,6 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
-
-	mongodb.InitConnection()
 
 	//Init dependecies
 	service := service.NewUserDomainService()
