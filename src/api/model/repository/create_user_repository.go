@@ -35,7 +35,7 @@ func (ur *userRepository) CreateUser(
 	value.ID = result.InsertedID.(primitive.ObjectID)
 
 	logger.Info(
-		"CreateUser repository executed successfully",
+		"createUser repository executed successfully",
 		zap.String("userId", value.ID.Hex()),
 		zap.String("journey", "createUser"))
 
