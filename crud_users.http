@@ -1,13 +1,13 @@
 // Buscar usuário no banco de dados por email
-GET http://localhost:8000/getUserByEmail/huncoding@gmail.com
+GET http://localhost:8000/getUserByEmail/test@gmail.com
 Accept: application/json
 Authorization:
 ###
 
 // Buscar usuário no banco de dados por email
-GET http://localhost:8000/getUserById/647b3fc9c5be50a5f2e48008
+GET http://localhost:8000/getUserById/65950f472641fdcc7bdb0dd3
 Accept: application/json
-Authorization:
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZ2UiOjIwLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwiZXhwIjoxNzA0Mzk1MzkwLCJpZCI6IjY1OTUwZjQ3MjY0MWZkY2M3YmRiMGRkMyIsIm5hbWUiOiJUZXN0In0.f1qXCdIzldm71rmP7IiLNrrNA6aR-OgbTXjQaylKvZ4
 ###
 
 // Criar um usuario dentro do banco de dados
