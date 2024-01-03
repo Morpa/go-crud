@@ -1,12 +1,13 @@
 package model
 
-import "golang.org/x/crypto/bcrypt"
+import (
+	"crypto/md5"
+	"encoding/hex"
+)
 
-func (ud *userDomain) EncryptPassword() (string, error) {
-	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(ud.password), 12)
-	if err != nil {
-		return "", err
-	}
-	ud.password = string(hashedPassword)
-	return string(hashedPassword), nil
+func (ud *userDomain) EncryptPassword() {
+	hash := md5.New()
+	defer hash.Reset()
+	hash.Write([]byte(ud.password))
+	ud.password = hex.EncodeToString(hash.Sum(nil))
 }
