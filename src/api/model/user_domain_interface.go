@@ -1,5 +1,7 @@
 package model
 
+import "github.com/Morpa/go-crud/src/api/configuration/rest_err"
+
 type UserDomainInterface interface {
 	GetEmail() string
 	GetPassword() string
@@ -9,6 +11,7 @@ type UserDomainInterface interface {
 
 	SetID(string)
 	EncryptPassword()
+	GenerateToken() (string, *rest_err.RestErr)
 }
 
 func NewUserDomain(

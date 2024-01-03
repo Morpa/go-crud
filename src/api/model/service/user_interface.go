@@ -36,6 +36,7 @@ type UserDomainService interface {
 		userDomain model.UserDomainInterface,
 	) (
 		model.UserDomainInterface,
+		string,
 		*rest_err.RestErr,
 	)
 }
